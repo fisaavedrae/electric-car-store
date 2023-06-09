@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    /*fon geologica para nombre auto, ubuntu para otros*/
+
+    font-family: 'Ubuntu', sans-serif;
+    color: #37474F;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.layout {
+    width: 376px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px, 100px, 600px, 100px;
+    grid-template-areas:
+        "header"
+        "filtros"
+        "productos"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #78909C;
+    color: white;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.navbar {
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.burguer {
+    display: block;
+    visibility: visible;
+}
+
+.menu {
+
+    display: block;
+
+    visibility: hidden;
+
+}
+
+.burguer:hover {
+    color: #37474F;
+    cursor: pointer;
+}
+
+.filtros {
+    grid-area: filtros;
+    height: 50px;
+    padding: 20px;
+    gap: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #CFD8DC;
+    color: #37474F;
+
+}
+
+.drop {
+    width: 70%;
+
+    background-color: #ECEFF1;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: #ECEFF1;
+}
+
+.drop:hover {
+    cursor: pointer;
+    background-color: #CFD8DC;
+    border: 1px;
+    border-style: solid;
+    border-color: #78909C;
+}
+
+.productos {
+    grid-area: productos;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECEFF1;
+
+}
+
+.grilla {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px;
+    border-style: solid;
+    border-color: #78909C;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.foto img {
+    width: 300px;
+}
+
+.modelo {
+    font-family: 'Geologica', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.ver-mas {
+    background-color: #546E7A;
+    color: #CFD8DC;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.ver-mas:hover {
+    background-color: #CFD8DC;
+    color: #37474F;
+    cursor: pointer;
+    border: 1px;
+    border-style: solid;
+    border-color: #37474F;
+    text-shadow: 1px 0 10px #546E7A;
+}
+
+.paginacion {
+    width: 50%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    color: #546E7A;
+    padding-bottom: 20px;
+}
+
+.item {
+    border: 1px;
+    border-style: solid;
+    border-color: #78909C;
+    padding: 5px;
+
+
+}
+
+.item:hover {
+    background-color: #37474F;
+    color: #CFD8DC;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #37474F;
+    color: #CFD8DC;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.socialmedia {
+    padding-bottom: 10px;
+}
+
+/* Responsive*/
+@media (min-width:576px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .layout {
+        width: 90%;
+        height: 1133px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 15% 85%;
+        grid-template-rows: 10% 80% 10%;
+        grid-template-areas:
+            "header filtros"
+            "header productos"
+            "footer productos";
+    }
+
+    .header {
+        grid-area: header;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        justify-content: flex-start;
+        background-color: #78909C;
+        color: white;
+        border-radius: 15px 0px 0px 0px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .burguer {
+        display: block;
+        visibility: hidden;
+    }
+
+    .menu {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        gap: 20px;
+        visibility: visible;
+    }
+
+    .menu-item:hover {
+        color: #37474F;
+        cursor: pointer;
+        text-shadow: 1px 0 10px #546E7A;
+    }
+
+    .filtros {
+        grid-area: filtros;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 15px 0px 0px;
+    }
+
+    .productos {
+        grid-area: productos;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        background-color: #ECEFF1;
+        border-radius: 0px 0px 15px 0px;
+
+    }
+
+    .grilla {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border: 1px;
+        border-style: solid;
+        border-color: #78909C;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .foto img {
+        width: 300px;
+    }
+
+    .paginacion {
+        width: 50%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        color: #546E7A;
+        padding-bottom: 30px;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: #37474F;
+        color: #CFD8DC;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        height: 66%;
+        border-radius: 0px 0px 0px 15px;
+        text-align: center;
+    }
+}
+
+/* Responsive*/
