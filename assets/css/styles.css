@@ -4,12 +4,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
-    /*fon geologica para nombre auto, ubuntu para otros*/
+
 
     font-family: 'Ubuntu', sans-serif;
     color: #37474F;
 }
 
+/* mobile first*/
 .container {
     width: 100%;
     display: flex;
@@ -26,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px, 100px, 600px, 100px;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
         "header"
         "filtros"
@@ -219,23 +220,161 @@ body {
 }
 
 /* Responsive*/
-@media (min-width:576px) {
+
+/* tablet responsive */
+@media (576px <=width <=992px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .layout {
+        width: 99%;
+        display: grid;
+
+        grid-template-columns: 150px auto;
+        grid-template-rows: 60px auto auto;
+        grid-template-areas:
+            "header header"
+            "filtros productos"
+            "footer footer";
+    }
+
+    .header {
+        grid-area: header;
+        height: 60px;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        background-color: #78909C;
+        color: white;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-flow: row;
+        justify-content: end;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .burguer {
+        display: block;
+        visibility: hidden;
+    }
+
+    .menu {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        gap: 20px;
+        visibility: visible;
+    }
+
+    .menu-item:hover {
+        color: #37474F;
+        cursor: pointer;
+        text-shadow: 1px 0 10px #546E7A;
+    }
+
+
+    .filtros {
+        grid-area: filtros;
+        height: 100%;
+        padding: 0px;
+        display: flex;
+        flex-flow: column;
+        justify-content: start;
+        background-color: #CFD8DC;
+        color: #37474F;
+
+    }
+
+    .texto {
+        padding-top: 20px;
+    }
+
+    .productos {
+        grid-area: productos;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        background-color: #ECEFF1;
+        border-radius: 0px 0px 0px 0px;
+        padding-top: 10px;
+    }
+
+    .grilla {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border: 1px;
+        border-style: solid;
+        border-color: #78909C;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .foto img {
+        width: 200px;
+    }
+
+    .paginacion {
+        width: 50%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        color: #546E7A;
+        padding-bottom: 30px;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: #37474F;
+        color: #CFD8DC;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        border-radius: 0px 0px 15px 15px;
+        text-align: center;
+    }
+}
+
+/* fin responsive tablet*/
+/* responsive pc*/
+@media (width>992px) {
     .container {
         width: 100%;
         display: flex;
         flex-flow: column;
         justify-content: center;
-        align-items: center;
 
     }
 
     .layout {
-        width: 90%;
-        height: 1133px;
+        width: 99%;
         display: grid;
-        align-items: center;
         grid-template-columns: 15% 85%;
-        grid-template-rows: 10% 80% 10%;
+        grid-template-rows: auto;
         grid-template-areas:
             "header filtros"
             "header productos"
@@ -247,7 +386,6 @@ body {
         height: 100%;
         display: flex;
         flex-flow: column;
-        align-items: start;
         justify-content: flex-start;
         background-color: #78909C;
         color: white;
@@ -287,7 +425,6 @@ body {
         display: flex;
         flex-flow: column;
         justify-content: center;
-        align-items: center;
         border-radius: 0px 15px 0px 0px;
     }
 
@@ -328,7 +465,7 @@ body {
     }
 
     .foto img {
-        width: 300px;
+        width: 200px;
     }
 
     .paginacion {
@@ -349,10 +486,12 @@ body {
         flex-flow: column;
         justify-content: center;
         align-items: center;
-        height: 66%;
+        height: auto;
         border-radius: 0px 0px 0px 15px;
         text-align: center;
     }
 }
+
+
 
 /* Responsive*/
