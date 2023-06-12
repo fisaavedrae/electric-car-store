@@ -4,8 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
-
-
     font-family: 'Ubuntu', sans-serif;
     color: #37474F;
 }
@@ -48,7 +46,6 @@ body {
 }
 
 .navbar {
-
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -60,11 +57,8 @@ body {
 }
 
 .menu {
-
     display: block;
-
     visibility: hidden;
-
 }
 
 .burguer:hover {
@@ -83,7 +77,6 @@ body {
     align-items: center;
     background-color: #CFD8DC;
     color: #37474F;
-
 }
 
 .drop {
@@ -120,7 +113,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ECEFF1;
-
 }
 
 .grilla {
@@ -192,8 +184,6 @@ body {
     border-style: solid;
     border-color: #78909C;
     padding: 5px;
-
-
 }
 
 .item:hover {
@@ -367,7 +357,6 @@ body {
         display: flex;
         flex-flow: column;
         justify-content: center;
-
     }
 
     .layout {
@@ -437,7 +426,6 @@ body {
         justify-content: center;
         background-color: #ECEFF1;
         border-radius: 0px 0px 15px 0px;
-
     }
 
     .grilla {
