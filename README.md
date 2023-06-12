@@ -1,6 +1,6 @@
 # Intro
 
-Proyecto de layout sitio ecommerce usando CSS Grid para el layout y Flex para la disposición de elementos.
+Proyecto de layout sitio ecommerce usando CSS Grid para el layout, Flex para la disposición de elementos y Media Query para hacer el sitio responsivo. Desarrolló con Mobile First
 
 # Resolución
 
@@ -8,6 +8,6 @@ Para desarrollar estoy usando un macbook air con una resolución de 1440x900, si
 
 
 
-[link repo](https://github.com/fisaavedrae/Layout-ecommerce)
+[link repo](https://github.com/fisaavedrae/electric-car-store)
 
-[link live app](https://layout-ecommerce.vercel.app/)
+[link live app](https://electric-car-store.vercel.app/)
